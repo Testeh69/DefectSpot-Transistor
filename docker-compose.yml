@@ -1,0 +1,24 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    container_name: transistor-api
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  ui:
+    build:
+      context: .
+      dockerfile: Dockerfile.ui
+    container_name: transistor-ui
+    ports:
+      - "8501:8501"
+    depends_on:
+      - api
+    environment:
+      # Streamlit va appeler l'API via le nom du service 'api'
+      API_URL: "http://api:8000/file"

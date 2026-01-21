@@ -2,8 +2,10 @@ import streamlit as st
 import requests
 import numpy as np
 from PIL import Image
+import os
 
-API_URL = "http://127.0.0.1:8000/file"
+API_URL = os.getenv("API_URL", "http://127.0.0.1:8000/file")
+
 
 st.set_page_config(page_title="Transistor Defect Detection", layout="centered")
 
