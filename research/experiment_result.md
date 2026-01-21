@@ -19,3 +19,15 @@ conclusion: augmenter alpha ou baisser lambda
 
 Using normal pictures
 Using noisy pictures
+
+
+
+
+Making an AE from scratch detect the dommage on transistors but not on pin, maybe a U-net with skip conection to retain the features is neccesary.
+
+
+
+Conclusion:
+
+
+An U-net is used for segmentation task 

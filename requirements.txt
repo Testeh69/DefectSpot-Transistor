@@ -1,0 +1,9 @@
+fastapi
+torch
+torchvision
+uvicorn[standard]
+pillow
+python-multipart
+streamlit
+requests
+numpy
